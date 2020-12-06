@@ -20,7 +20,6 @@ const Builder = ({
         editorVisible &&
         <FormEditor />
       }
-      <div className="container">
         <div className="row mt-3">
           <div className="col-md-8">
             <Preview 
@@ -33,7 +32,6 @@ const Builder = ({
             />
           </div>
         </div>
-      </div>
     </React.Fragment>
   )
 }
