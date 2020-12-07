@@ -12,6 +12,7 @@ import defaultItems from "./Toolbar/defaultItems";
 const Builder = ({
   editorVisible,
   onSubmit,
+  onUpdate,
   items
 }) => {
   return (
@@ -21,14 +22,15 @@ const Builder = ({
         <FormEditor />
       }
         <div className="row mt-3">
-          <div className="col-md-8">
-            <Preview 
-              onSubmit={onSubmit} 
-            />
-          </div>
           <div className="col-md-4">
             <Toolbar 
               items={items} 
+            />
+          </div>
+          <div className="col-md-8">
+            <Preview 
+              onSubmit={onSubmit} 
+              onUpdate={onUpdate} 
             />
           </div>
         </div>
@@ -38,6 +40,7 @@ const Builder = ({
 
 Builder.propTypes = {
 	onSubmit: PropTypes.func.isRequired,
+	onUpdate: PropTypes.func.isRequired,
 	items: PropTypes.array
 };
 

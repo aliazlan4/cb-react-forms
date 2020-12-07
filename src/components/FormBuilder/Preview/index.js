@@ -36,12 +36,15 @@ class Preview extends Component {
     const {
       hovered,
       dragItem,
-      onSubmit,
+	  onSubmit,
+	  onUpdate,
       removeItem,
       showEditor,
       previewItems,
       connectDropTarget
-    } = this.props;
+	} = this.props;
+	
+	onUpdate(previewItems);
 
     const border = hovered ? "1px solid green" : "1px solid #ccc";
 

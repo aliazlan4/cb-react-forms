@@ -14,7 +14,7 @@ class HeaderBar extends Component {
           onClick={() => removeItem(id)}
           className="float-right onHover"
         >
-          <i className="fa fa-trash-o" />
+          <i className="fa fa-trash" />
         </span>
         {item.element !== "LineBreak" && (
           <span
