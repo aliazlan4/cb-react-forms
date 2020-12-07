@@ -11,27 +11,27 @@ import {
 import DatePicker from 'react-date-picker';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
-// toolbar options for the WYSIWYG Editor
-const toolbar = {
-  options: [
-    "inline",
-    "list",
-    "textAlign",
-    "fontSize",
-    "link",
-    "history"
-  ],
-  inline: {
-    inDropdown: false,
-    options: [
-      "bold",
-      "italic",
-      "underline",
-      "superscript",
-      "subscript"
-    ]
-  }
-};
+// // toolbar options for the WYSIWYG Editor
+// const toolbar = {
+//   options: [
+//     "inline",
+//     "list",
+//     "textAlign",
+//     "fontSize",
+//     "link",
+//     "history"
+//   ],
+//   inline: {
+//     inDropdown: false,
+//     options: [
+//       "bold",
+//       "italic",
+//       "underline",
+//       "superscript",
+//       "subscript"
+//     ]
+//   }
+// };
 
 class FormEditor extends Component {
   constructor(props) {
@@ -195,9 +195,11 @@ class FormEditor extends Component {
           {/* ------------- LABEL ------------- */}
           <h5>Label:</h5>
           <Editor
-            toolbar={toolbar}
+			// toolbar={toolbar}
+			toolbarHidden
             wrapperClassName="demo-wrapper"
-            editorClassName="demo-editor"
+			editorClassName="demo-editor"
+			toolbarClassName="d-none"
             editorState={label}
             onEditorStateChange={editorState =>
               this.handleOptions("label", editorState)

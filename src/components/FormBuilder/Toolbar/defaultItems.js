@@ -17,7 +17,7 @@ export default () => [
   {
     key: "LineBreak",
     name: "Line Break",
-    icon: "fa fa-arrows-h"
+    icon: "fas fa-arrows-alt-h"
   },
   {
     key: "Dropdown",
@@ -32,7 +32,7 @@ export default () => [
   {
     key: "Checkboxes",
     name: "Checkboxes",
-    icon: "fa fa-check-square-o"
+    icon: "fas fa-check-square"
   },
   {
     key: "RadioButtons",
